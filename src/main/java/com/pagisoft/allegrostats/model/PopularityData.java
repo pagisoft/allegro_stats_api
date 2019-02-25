@@ -1,23 +1,33 @@
 package com.pagisoft.allegrostats.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@ApiModel(value="PopularityData", description="Popularity related data")
 @Entity
 public class PopularityData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(position = 1)
     private Long id;
 
+    @ApiModelProperty(position = 3)
     private String categoryId;
 
+    @ApiModelProperty(position = 4)
     private Integer popularity;
 
-    private Date aggregatonDate;
+    @ApiModelProperty(position = 6)
+    private Date aggregationDate;
 
+    @ApiModelProperty(position = 2)
     private Long offerId;
 
+    @ApiModelProperty(position = 5)
     private Integer stock;
 
     public Long getId() {
@@ -44,12 +54,12 @@ public class PopularityData {
         this.popularity = popularity;
     }
 
-    public Date getAggregatonDate() {
-        return aggregatonDate;
+    public Date getAggregationDate() {
+        return aggregationDate;
     }
 
-    public void setAggregatonDate(Date aggregatonDate) {
-        this.aggregatonDate = aggregatonDate;
+    public void setAggregationDate(Date aggregationDate) {
+        this.aggregationDate = aggregationDate;
     }
 
     public Long getOfferId() {

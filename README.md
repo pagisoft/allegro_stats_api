@@ -7,3 +7,7 @@
 #### Swagger UI:
 http://localhost:8080/swagger-ui.html
 
+#### RSQL:
+https://github.com/jirutka/rsql-parser#grammar-and-semantic
+
+
