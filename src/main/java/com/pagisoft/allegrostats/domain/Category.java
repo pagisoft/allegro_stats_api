@@ -1,6 +1,8 @@
 package com.pagisoft.allegrostats.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
@@ -15,6 +17,7 @@ public class Category {
 
     @ApiModelProperty(position = 3)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    @JsonProperty("children")
     List<Category> categories;
 
     public Category(String id, String name) {
