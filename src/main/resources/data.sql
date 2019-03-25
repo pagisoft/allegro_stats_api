@@ -9,16 +9,16 @@ INSERT INTO category(category_id, name, parent_id,leaf) VALUES (3, 'Root 3', NUL
 
 
 INSERT INTO category(category_id, name, parent_id,leaf) VALUES (11, 'Child 1 Root 1', 1,FALSE);
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (12, 'Child 2 Root 1', 1,FALSE);
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (13, 'Child 3 Root 1', 1,FALSE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (12, 'Child 2 Root 1', 1,TRUE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (13, 'Child 3 Root 1', 1,TRUE);
 
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (21, 'Child 1 Root 2', 2,FALSE);
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (22, 'Child 2 Root 2', 2,FALSE);
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (23, 'Child 3 Root 2', 2,FALSE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (21, 'Child 1 Root 2', 2,TRUE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (22, 'Child 2 Root 2', 2,TRUE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (23, 'Child 3 Root 2', 2,TRUE);
 
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (31, 'Child 1 Root 3', 3,FALSE);
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (32, 'Child 2 Root 3', 3,FALSE);
-INSERT INTO category(category_id, name, parent_id,leaf) VALUES (33, 'Child 3 Root 3', 3,FALSE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (31, 'Child 1 Root 3', 3,TRUE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (32, 'Child 2 Root 3', 3,TRUE);
+INSERT INTO category(category_id, name, parent_id,leaf) VALUES (33, 'Child 3 Root 3', 3,TRUE);
 
 INSERT INTO category(category_id, name, parent_id,leaf) VALUES (111, 'Child 1 Child 1 Root 1', 11,FALSE);
 INSERT INTO category(category_id, name, parent_id,leaf) VALUES (112, 'Child 2 Child 1 Root 1', 11,FALSE);

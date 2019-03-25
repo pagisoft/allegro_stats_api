@@ -16,6 +16,9 @@ public class Category {
     private String name;
 
     @ApiModelProperty(position = 3)
+    private Boolean leaf;
+
+    @ApiModelProperty(position = 4)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @JsonProperty("children")
     List<Category> categories;
@@ -23,6 +26,12 @@ public class Category {
     public Category(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Category(String id, String name, Boolean leaf) {
+        this.id = id;
+        this.name = name;
+        this.leaf = leaf;
     }
 
     public String getId() {
@@ -47,5 +56,13 @@ public class Category {
 
     public void setCategories(List<Category> categories) {
         this.categories = categories;
+    }
+
+    public Boolean isLeaf() {
+        return leaf;
+    }
+
+    public void setLeaf(Boolean leaf) {
+        this.leaf = leaf;
     }
 }

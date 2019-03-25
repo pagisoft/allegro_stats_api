@@ -25,6 +25,10 @@ public class CategoryService {
         return Lists.newArrayList(this.categoryDao.findAll());
     }
 
+    private List<CategoryDTO> getCategoriesFromDbByParentId(String parentId){
+        return Lists.newArrayList(this.categoryDao.findByParentId(parentId));
+    }
+
     public List<Category> getAllCategories() {
 
         this.categoriesFromDb = getAllCategoriesFromDb();
@@ -58,5 +62,16 @@ public class CategoryService {
         return categories;
     }
 
+    public List<Category> getCategoriesByParentId(String parentId) {
+
+        List<CategoryDTO> categoryDTOList = getCategoriesFromDbByParentId(parentId);
+
+        List<Category> categories = categoryDTOList.stream()
+                .map(temp -> {
+                    Category category = new Category(temp.getCategoryId(), temp.getName(), temp.getLeaf());
+                    return category;
+                }).collect(Collectors.toList());
+        return categories;
+    }
 
 }
